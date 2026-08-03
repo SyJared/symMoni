@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import BiometricLock from "../components/BiometricLock";
+import Dashboard from "./dashboard";
 
 export default function Index() {
     const [unlocked, setUnlocked] = useState(false);
@@ -9,14 +9,5 @@ export default function Index() {
         return <BiometricLock onSuccess={() => setUnlocked(true)} />;
     }
 
-    return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Unlocked! Dashboard goes here.</Text>
-        </View>
-    );
+    return <Dashboard />;
 }
-
-const styles = StyleSheet.create({
-    container: { flex: 1, alignItems: "center", justifyContent: "center" },
-    text: { fontSize: 18, fontWeight: "600" },
-});

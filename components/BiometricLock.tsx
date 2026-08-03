@@ -2,13 +2,13 @@ import * as LocalAuthentication from "expo-local-authentication";
 import { Fingerprint, Lock, RotateCcw, ScanFace, ShieldAlert } from "lucide-react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import {
-  Animated,
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Animated,
+    SafeAreaView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
 
 type Status = "checking" | "idle" | "authenticating" | "error" | "unsupported";
